@@ -42,6 +42,7 @@ ExportedObj/
 *.tmp
 *.user
 *.userprefs
+*.userosscache
 *.pidb
 *.booproj
 *.svd
@@ -89,6 +90,13 @@ crashlytics-build.properties
 /[Aa]ssets/**/FMODStudioCache.asset.meta
 /[Aa]ssets/Plugins/FMOD/Cache.meta
 /[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+
+# Ignore the Cache folder since it is updated locally.
+/[Aa]ssets/Plugins/FMOD/Cache/*
+
+# Ignore bank files in the StreamingAssets folder.
+/[Aa]ssets/StreamingAssets/**/*.bank
+/[Aa]ssets/StreamingAssets/**/*.bank.meta
 
 # Log-files
 fmod.log
