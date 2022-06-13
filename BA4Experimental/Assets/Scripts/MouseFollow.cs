@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
-public class MouseFollow : MonoBehaviour
-{
-    [SerializeField] private float speed;
-    [SerializeField] private float maxSpeed = 5;
-    [SerializeField] private float friction = 8f;
-    [SerializeField] private float acceleration = .2f;
-    [SerializeField] private float rotationSpeed = 5f;
+public class MouseFollow : MonoBehaviour {
+
+    [SerializeField] public float currentSpeed;
+    [Range(0f, 10f)] [SerializeField] private float maxSpeed = 5;
+    [Range(0f, 20f)] [SerializeField] private float friction = 8f;
+    [Range(0f, 1f) ] [SerializeField] private float acceleration = .2f;
+    [Range(0f, 20f)] [SerializeField] private float rotationSpeed = 5f;
 
     private float distance;
-    private Rigidbody2D rb;
     private Vector3 mousePos;
-    //private Vector2 position = new Vector2(0, 0);
 
-    //[SerializeField] private float moveSpeed = 10f;
+    private Animator anim;
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -43,7 +46,16 @@ public class MouseFollow : MonoBehaviour
         } else
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
-        } 
+        }
+
+        //Flip fish when looking the to left
+        if (transform.rotation.eulerAngles.z < 270 && transform.rotation.eulerAngles.z > 90)
+        {
+            sr.flipY = true;
+        } else
+        {
+            sr.flipY = false;
+        }
     }
 
 
@@ -51,33 +63,33 @@ public class MouseFollow : MonoBehaviour
     {
         if(distance < 0.3f)
         {
-            if(speed > 0)
-            speed -= friction * Time.deltaTime;
+            if(currentSpeed > 0)
+            currentSpeed -= friction * Time.deltaTime;
         }
 
         //If holding down mouse button
         if (Input.GetMouseButton(0)){
             
-            if(speed < maxSpeed){
-                speed += maxSpeed * acceleration * Time.deltaTime;
+            if(currentSpeed < maxSpeed){
+                currentSpeed += maxSpeed * acceleration * Time.deltaTime;
             } else{
-                speed = maxSpeed;
+                currentSpeed = maxSpeed;
             }
 
         } else
         {
-            if(speed > 0){
-                speed -= friction * Time.deltaTime;
+            if(currentSpeed > 0){
+                currentSpeed -= friction * Time.deltaTime;
             } else{
-                speed = 0;
+                currentSpeed = 0;
             }
 
             //Decelerate
             //rb.velocity = rb.velocity * deceleration * Time.deltaTime;
         }
 
-        if(speed > 0){
-            rb.MovePosition(Vector2.MoveTowards(rb.position, mousePos, Time.deltaTime * speed));
+        if(currentSpeed > 0){
+            rb.MovePosition(Vector2.MoveTowards(rb.position, mousePos, Time.deltaTime * currentSpeed));
         }
 
         //Move rigidbody

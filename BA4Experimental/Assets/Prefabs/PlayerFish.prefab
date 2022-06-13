@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896398529604501352}
   - component: {fileID: 896398529604501355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 896398530516894756}
   - component: {fileID: 896398530516894757}
   - component: {fileID: 896398530516894754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerFish
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -187,12 +187,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce6fa601f3026534997061795c5725d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef08f339df325a54fa82ec0b168dc23c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 20}
+  m_Size: {x: 3.82, y: 2.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa9f4ec96916314c9e52fe1f15870c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  maxSpeed: 5
+  currentSpeed: 0
+  maxSpeed: 4
   friction: 10
   acceleration: 0.8
   rotationSpeed: 12
@@ -235,7 +235,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &896398530516894754
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
