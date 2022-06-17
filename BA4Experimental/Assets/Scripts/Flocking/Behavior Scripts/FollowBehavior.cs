@@ -14,7 +14,7 @@ public class FollowBehavior : FilteredFlockBehavior
         }
 
         //add all points together and average
-        Vector2 avoidanceMove = Vector2.zero;
+        Vector2 followMove = Vector2.zero;
         int nAvoid = 0;
         List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent, context);
         foreach (Transform item in filteredContext)
@@ -22,16 +22,16 @@ public class FollowBehavior : FilteredFlockBehavior
             if (Vector2.SqrMagnitude(item.position - agent.transform.position) < flock.SquareAvoidanceRadius)
             {
                 nAvoid++;
-                avoidanceMove += (Vector2)(agent.transform.position + item.position);
+                followMove += (Vector2)(agent.transform.position + item.position);
             }
 
         }
 
         if (nAvoid > 0)
         {
-            avoidanceMove /= nAvoid;
+            followMove /= nAvoid;
         }
-        return avoidanceMove;
+        return followMove;
     }
 }
 

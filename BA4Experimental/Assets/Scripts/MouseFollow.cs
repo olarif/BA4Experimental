@@ -49,7 +49,7 @@ public class MouseFollow : MonoBehaviour {
         }
 
         //Flip fish when looking the to left
-        if (transform.rotation.eulerAngles.z < 270 && transform.rotation.eulerAngles.z > 90)
+        if (transform.rotation.eulerAngles.z < 269 && transform.rotation.eulerAngles.z > 91)
         {
             sr.flipY = true;
         } else

@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
+    private GameObject player;
+    public float aggroDistance = 5f;
+
     public FlockAgent agentPrefab;
-    List<FlockAgent> agents = new List<FlockAgent>();
+    [HideInInspector] public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
 
     [Range(10, 500)]
     public int startingCount = 250;
     const float agentDensity = 0.08f;
-    [Range(1f, 100f)]
+    [Range(0f, 100f)]
     public float driveFactor = 10f;
     [Range(1f, 100f)]
     public float maxSpeed = 5f;
@@ -21,6 +24,8 @@ public class Flock : MonoBehaviour
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
 
+    public Transform spawn;
+
     float squareMaxSpeed;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
@@ -29,6 +34,8 @@ public class Flock : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         squareMaxSpeed = maxSpeed * maxSpeed;
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
@@ -37,7 +44,8 @@ public class Flock : MonoBehaviour
         {
             FlockAgent newAgent = Instantiate(
                     agentPrefab,
-                    Random.insideUnitCircle * startingCount * agentDensity,
+                    //Random.insideUnitCircle * startingCount * agentDensity,
+                    spawn.position ,
                     Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
                     transform
                 );
@@ -49,12 +57,10 @@ public class Flock : MonoBehaviour
 
     void Update()
     {
-        foreach(FlockAgent agent in agents)
+        foreach(FlockAgent agent in agents.ToArray())
         {
             List<Transform> context = GetNearbyObjects(agent);
 
-            //agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
-            
             Vector2 move = behavior.CalculateMove(agent, context, this);
             move *= driveFactor;
             if(move.sqrMagnitude > squareMaxSpeed)
@@ -62,6 +68,17 @@ public class Flock : MonoBehaviour
                 move = move.normalized * maxSpeed;
             }
             agent.Move(move);
+
+
+            //check is distance to player is small -> remove agent from list 
+            float distance = Vector2.Distance(agent.transform.position, player.transform.position);
+
+            if(distance < aggroDistance)
+            {
+                agents.Remove(agent);
+            }
+
+            //Debug.Log(agent + " " + distance);
         }
     }
 
@@ -78,5 +95,10 @@ public class Flock : MonoBehaviour
         }
 
         return context;
+    }
+
+    public void RemoveFromList(FlockAgent agent)
+    {
+        agents.Remove(agent);
     }
 }

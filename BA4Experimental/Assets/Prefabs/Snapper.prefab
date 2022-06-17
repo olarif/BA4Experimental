@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 87689608230342747}
   - component: {fileID: 557790338896871708}
+  - component: {fileID: 6318804920598991881}
   m_Layer: 8
-  m_Name: AgentSprite
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2380567759969764934}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3659673698278350320}
@@ -73,9 +74,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 532392040, guid: 78a2be81ecf9e7f4ea2563498fa6654d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43310c5755d5de747b0ab4236efb4066, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6318804920598991881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2380567759969764934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b30509a76212941b462319aaeebeba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6076986632218340122
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,9 +109,10 @@ GameObject:
   - component: {fileID: 7815915684539392644}
   - component: {fileID: 1296459359284714758}
   - component: {fileID: -6865256666251591168}
+  - component: {fileID: 7892548412623256091}
   m_Layer: 8
-  m_Name: AgentRed
-  m_TagString: Untagged
+  m_Name: Snapper
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,10 +168,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6076986632218340122}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff8511ed9799c5744b91abff92a83d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 3
-  moveSpeed: 3
+  aggroRange: 4
+  stopRange: 1
+  moveSpeed: 1.5
+  rotationSpeed: 6
+--- !u!114 &7892548412623256091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076986632218340122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029970de7e2261449d1f0e110315340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMin: 0.3
+  distanceMax: 0.7
+  stopDistance: 0.1

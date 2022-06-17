@@ -4,25 +4,55 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
+    GameObject playerFollow;
     GameObject player;
     [SerializeField] float aggroRange;
+    [SerializeField] float stopRange;
     [SerializeField] float moveSpeed;
+    [SerializeField] float rotationSpeed = 2f;
+    //[SerializeField] Vector2 offset;
 
-    Rigidbody2D rb;
+    private bool following = false;
+
+    private float distance;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        playerFollow = GameObject.FindGameObjectWithTag("Follow");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
-        float distance = Vector2.Distance(transform.position, player.transform.position);
+        distance = Vector3.Distance(playerFollow.transform.position, transform.position);
 
-        if(distance < aggroRange)
+        if (distance < aggroRange && distance >= stopRange)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+            following = true;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (following)
+        {
+            //rotate towards player
+            var offset = -90f;
+            Vector2 direction = player.transform.position - transform.position;
+            direction.Normalize();
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle + offset, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+            //move towards tail of fish
+            transform.position = Vector2.Lerp((Vector2)this.transform.position, playerFollow.transform.position, moveSpeed * Time.deltaTime);
+        }
+
+        if (distance < aggroRange && distance >= stopRange)
+        {
+            //only follow is fish is moving
+            //transform.position = Vector2.Lerp((Vector2)this.transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards((Vector2)this.transform.position + offset, player.transform.position, moveSpeed * Time.deltaTime);
         }
     }
 }
