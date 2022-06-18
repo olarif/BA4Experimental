@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8350164229429531538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8350164229429531536}
+  - component: {fileID: 8350164229429531537}
+  m_Layer: 0
+  m_Name: Flock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8350164229429531536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350164229429531538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8350164229429531537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350164229429531538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059a538adf608f7489240d4b0bb7778a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroDistance: 4
+  agentPrefab: {fileID: 7815915684539392644, guid: bb5140e0e1ee78b46b62b3aff537200d, type: 3}
+  agents: []
+  behavior: {fileID: 11400000, guid: 968058917f3587e40a92c5f8300dedd7, type: 2}
+  startingCount: 30
+  driveFactor: 1
+  maxSpeed: 3
+  neighborRadius: 1
+  avoidanceRadiusMultiplier: 0.2
+  spawn: {fileID: 8350164229429531536}
