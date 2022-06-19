@@ -11,7 +11,7 @@ public class Flock : MonoBehaviour
     [HideInInspector] public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
 
-    [Range(10, 500)]
+    [Range(1, 500)]
     public int startingCount = 250;
     const float agentDensity = 0.08f;
     [Range(0f, 100f)]
