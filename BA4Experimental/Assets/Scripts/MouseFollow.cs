@@ -18,6 +18,13 @@ public class MouseFollow : MonoBehaviour {
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
+
+    public SpriteRenderer body;
+    public SpriteRenderer sideFin;
+    public SpriteRenderer bottomFin;
+    public SpriteRenderer rareFin;
+   
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -52,11 +59,29 @@ public class MouseFollow : MonoBehaviour {
         if (transform.rotation.eulerAngles.z < 269 && transform.rotation.eulerAngles.z > 91)
         {
             sr.flipY = true;
-        } else
+            body.flipY = true;
+            body.transform.localPosition = new Vector3(body.transform.localPosition.x,3.25f,body.transform.localPosition.z);
+            sideFin.flipY = true;
+            sideFin.transform.localPosition = new Vector3(sideFin.transform.localPosition.x, 3.14f, body.transform.localPosition.z);
+            bottomFin.flipY = true;
+            bottomFin.transform.localPosition = new Vector3(bottomFin.transform.localPosition.x, 3.25f, body.transform.localPosition.z);
+            rareFin.flipY = true;
+            rareFin.transform.localPosition=new Vector3(rareFin.transform.localPosition.x, 3.25f,rareFin.transform.localPosition.z);
+        }
+        else
         {
             sr.flipY = false;
+            body.flipY = false;
+            body.transform.localPosition = new Vector3(body.transform.localPosition.x, 0f, body.transform.localPosition.z);
+            sideFin.flipY = false;
+            sideFin.transform.localPosition = new Vector3(sideFin.transform.localPosition.x, 3.09f, body.transform.localPosition.z);
+            bottomFin.flipY = false;
+            bottomFin.transform.localPosition = new Vector3(bottomFin.transform.localPosition.x, 2.415f, body.transform.localPosition.z);
+            rareFin.flipY = false;
+            rareFin.transform.localPosition = new Vector3(rareFin.transform.localPosition.x, 3.24f, rareFin.transform.localPosition.z);
         }
     }
+    
 
 
     private void FixedUpdate()
