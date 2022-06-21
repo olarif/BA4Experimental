@@ -33,12 +33,9 @@ public class Separation : MonoBehaviour
                 {
                     //transform.position = Vector2.MoveTowards(transform.position, go.transform.position, speed * Time.deltaTime);
                     
-                    
                     Vector3 direction = transform.position - go.transform.position;
                     direction.Normalize();
 
-                    //add random small offset to make it seem more differentiated
-                    
 
                     transform.position += direction * Time.deltaTime;
                     //transform.Translate(direction * Time.deltaTime);
