@@ -14,7 +14,7 @@ public class MouseFollow : MonoBehaviour {
     private float distance;
     private Vector3 mousePos;
 
-    private Animator anim;
+    public Animator anim;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
@@ -27,7 +27,7 @@ public class MouseFollow : MonoBehaviour {
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -116,7 +116,7 @@ public class MouseFollow : MonoBehaviour {
         if(currentSpeed > 0){
             rb.MovePosition(Vector2.MoveTowards(rb.position, mousePos, Time.deltaTime * currentSpeed));
         }
-
+        anim.SetFloat("Speed", currentSpeed);
         //Move rigidbody
         //position = Vector2.Lerp(transform.position, mousePos, moveSpeed / 10);
         //rb.MovePosition(position);
