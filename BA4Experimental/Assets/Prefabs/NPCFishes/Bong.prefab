@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59b2f571421b35943a12ff7a2a14284e, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: 4c8317a7f79ed544fb2627ca3b9b8b83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: -6865256666251591168}
   - component: {fileID: 7892548412623256091}
   m_Layer: 8
-  m_Name: Zebra
+  m_Name: Bong
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,8 +158,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016790286, y: -0.014233708}
-  m_Size: {x: 0.3743337, y: 0.5084653}
+  m_Offset: {x: -0.05, y: -0.014233708}
+  m_Size: {x: 0.4, y: 0.8}
   m_Direction: 0
 --- !u!114 &-6865256666251591168
 MonoBehaviour:
@@ -177,7 +177,6 @@ MonoBehaviour:
   stopRange: 1
   moveSpeed: 1
   rotationSpeed: 6
-  offset: {x: 0, y: 0}
 --- !u!114 &7892548412623256091
 MonoBehaviour:
   m_ObjectHideFlags: 0
