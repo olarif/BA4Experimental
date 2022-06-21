@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RadiusDefault
   m_EditorClassIdentifier: 
   center: {x: 0, y: 0}
-  radius: 2
+  radius: 3
