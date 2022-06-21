@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0d046a9d0cfaa408fa1d1befa7f196, type: 3}
   m_Name: Radius3
   m_EditorClassIdentifier: 
-  center: {x: 20, y: 0}
+  center: {x: 9.8, y: -1.8}
   radius: 3
