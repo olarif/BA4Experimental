@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 830c0980ecabaaf4bbdb49f983f177a1, type: 2}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
@@ -3200,6 +3200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1260091476}
     m_Modifications:
+    - target: {fileID: 8704281918569051305, guid: 30d27d5403d92ac4581a95700989df9a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8704281918569051310, guid: 30d27d5403d92ac4581a95700989df9a, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3896,7 +3900,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 042b2b7ad7eb5904fa460fddb93ea448, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
@@ -5493,7 +5497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945873784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.6, y: 0.52, z: 0}
+  m_LocalPosition: {x: 46, y: 0.52, z: 0}
   m_LocalScale: {x: 1.9799316, y: 1.9585235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6604,7 +6608,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 53b834b601e0f8648877871dcdb74c8a, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
@@ -7437,7 +7441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076408342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 0.55, z: 0}
+  m_LocalPosition: {x: 11, y: 0.55, z: 0}
   m_LocalScale: {x: 1.9799316, y: 1.9319584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8546,7 +8550,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 042b2b7ad7eb5904fa460fddb93ea448, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
@@ -8632,7 +8636,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 26c48bd237a43d146a38d7ebce9dddb0, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
@@ -8675,7 +8679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290765537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.69, y: 0.59, z: 0}
+  m_LocalPosition: {x: 70, y: 0.59, z: 0}
   m_LocalScale: {x: 1.9799316, y: 1.9585235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10109,7 +10113,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: c541bc3cd90fa5a488070238ac4f9140, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
@@ -13318,7 +13322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
