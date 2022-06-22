@@ -24,7 +24,7 @@ public class Flock : MonoBehaviour
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
 
-    public Transform spawn;
+    Transform spawn;
 
     float squareMaxSpeed;
     float squareNeighborRadius;
@@ -35,6 +35,8 @@ public class Flock : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        spawn = this.transform;
 
         squareMaxSpeed = maxSpeed * maxSpeed;
         squareNeighborRadius = neighborRadius * neighborRadius;
