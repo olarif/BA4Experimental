@@ -73,7 +73,7 @@ public class Flock : MonoBehaviour
 
 
             //check is distance to player is small -> remove agent from list 
-            float distance = Vector2.Distance(agent.transform.position, player.transform.position);
+            float distance = Vector3.Distance(agent.transform.position, player.transform.position);
 
             if(distance < aggroDistance)
             {

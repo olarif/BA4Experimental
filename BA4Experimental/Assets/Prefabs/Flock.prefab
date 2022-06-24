@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059a538adf608f7489240d4b0bb7778a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroDistance: 4
+  aggroDistance: 3
   agentPrefab: {fileID: 7815915684539392644, guid: bb5140e0e1ee78b46b62b3aff537200d, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: 968058917f3587e40a92c5f8300dedd7, type: 2}
@@ -53,4 +53,3 @@ MonoBehaviour:
   maxSpeed: 3
   neighborRadius: 1
   avoidanceRadiusMultiplier: 0.2
-  spawn: {fileID: 8350164229429531536}

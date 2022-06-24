@@ -173,10 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8511ed9799c5744b91abff92a83d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 4
+  aggroRange: 3.1
   stopRange: 1
-  moveSpeed: 1
-  rotationSpeed: 6
+  rotationSpeed: 4
+  smoothDamp: 0.7
 --- !u!114 &7892548412623256091
 MonoBehaviour:
   m_ObjectHideFlags: 0

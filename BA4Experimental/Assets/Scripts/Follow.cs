@@ -8,8 +8,12 @@ public class Follow : MonoBehaviour
     GameObject player;
     [SerializeField] float aggroRange;
     [SerializeField] float stopRange;
-    [SerializeField] float moveSpeed;
+    //[SerializeField] float moveSpeed;
     [SerializeField] float rotationSpeed = 2f;
+    [SerializeField] float smoothDamp = 2f;
+
+
+    Vector2 velocity;
     //[SerializeField] Vector2 offset;
 
     private bool following = false;
@@ -24,7 +28,7 @@ public class Follow : MonoBehaviour
 
     void Update()
     {
-        distance = Vector3.Distance(playerFollow.transform.position, transform.position);
+        distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (distance < aggroRange && distance >= stopRange)
         {
@@ -45,7 +49,8 @@ public class Follow : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
             //move towards tail of fish
-            transform.position = Vector2.Lerp((Vector2)this.transform.position, playerFollow.transform.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.SmoothDamp(this.transform.position, playerFollow.transform.position, ref velocity, smoothDamp);
+            //transform.position = Vector2.Lerp((Vector2)this.transform.position, playerFollow.transform.position, moveSpeed * Time.deltaTime);
         }
 
         if (distance < aggroRange && distance >= stopRange)
