@@ -11,8 +11,9 @@ public class Follow : MonoBehaviour
     //[SerializeField] float moveSpeed;
     [SerializeField] float rotationSpeed = 2f;
     [SerializeField] float smoothDamp = 2f;
+    [SerializeField] float speed = 2f;
 
-
+    Rigidbody2D rb;
     Vector2 velocity;
     //[SerializeField] Vector2 offset;
 
@@ -24,6 +25,7 @@ public class Follow : MonoBehaviour
     {
         playerFollow = GameObject.FindGameObjectWithTag("Follow");
         player = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -51,6 +53,8 @@ public class Follow : MonoBehaviour
             //move towards tail of fish
             transform.position = Vector2.SmoothDamp(this.transform.position, playerFollow.transform.position, ref velocity, smoothDamp);
             //transform.position = Vector2.Lerp((Vector2)this.transform.position, playerFollow.transform.position, moveSpeed * Time.deltaTime);
+            //Vector2 newVector = direction.normalized * speed;
+            //rb.velocity = newVector;
         }
 
         if (distance < aggroRange && distance >= stopRange)
