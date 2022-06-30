@@ -21,6 +21,6 @@ MonoBehaviour:
   weights:
   - 100
   - 50
-  - 1
-  - 5
   - 100
+  - 5
+  - 200

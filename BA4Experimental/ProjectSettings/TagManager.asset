@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - Follow
+  - GM
   layers:
   - Default
   - TransparentFX

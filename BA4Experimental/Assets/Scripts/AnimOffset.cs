@@ -11,10 +11,13 @@ public class AnimOffset : MonoBehaviour
     {
         offset = Random.Range(0f, 1f);
         anim = GetComponent<Animator>();
+
+        anim.speed = Random.Range(0.75f, 1.25f);
+        anim.SetFloat("Cycle Offset", offset);
     }
 
     void Update()
     {
-        anim.SetFloat("Cycle Offset", offset);
+        
     }
 }

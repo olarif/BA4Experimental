@@ -6,12 +6,16 @@ public class Follow : MonoBehaviour
 {
     GameObject playerFollow;
     GameObject player;
+    GameMaster gm; 
+
     [SerializeField] float aggroRange;
     [SerializeField] float stopRange;
     //[SerializeField] float moveSpeed;
     [SerializeField] float rotationSpeed = 2f;
     [SerializeField] float smoothDamp = 2f;
-    [SerializeField] float speed = 2f;
+    //[SerializeField] float speed = 2f;
+
+    private Vector2 offset = new Vector2(-2, 0);
 
     Rigidbody2D rb;
     Vector2 velocity;
@@ -26,6 +30,18 @@ public class Follow : MonoBehaviour
         playerFollow = GameObject.FindGameObjectWithTag("Follow");
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        playerFollow = GameObject.FindGameObjectWithTag("Follow");
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (following)
+        {
+            transform.position = gm.lastCheckpointPos + offset;
+        }
     }
 
     void Update()
@@ -36,6 +52,14 @@ public class Follow : MonoBehaviour
         {
             following = true;
         }
+
+        if (following)
+        {
+
+            //transform.parent = null;
+            //DontDestroyOnLoad(gameObject);
+        }
+
     }
 
     private void FixedUpdate()

@@ -32,6 +32,11 @@ public class Flock : MonoBehaviour
 
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

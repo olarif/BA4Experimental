@@ -17,6 +17,11 @@ public class Separation : MonoBehaviour
         distanceBetween = Random.Range(distanceMin, distanceMax);
     }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        fish = GameObject.FindGameObjectsWithTag("NPC");
+    }
+
     void Update()
     {
         foreach(GameObject go in fish)
