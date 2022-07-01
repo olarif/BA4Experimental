@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 275091273360302704}
   - component: {fileID: 275091273360302707}
   - component: {fileID: 275091273360302706}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Particle System2
   m_TagString: BlackSub
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275091273360302709}
   serializedVersion: 8
-  lengthInSec: 2
+  lengthInSec: 30
   simulationSpeed: 0.5
   stopAction: 0
   cullingMode: 0
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.1509434, g: 0.072190315, b: 0, a: 1}
+      maxColor: {r: 0.047169805, g: 0.022343593, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -601,14 +601,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 2000
+    maxNumParticles: 20000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3550,7 +3550,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -3789,7 +3789,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 2496
+      m_Bits: 2497
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

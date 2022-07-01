@@ -8,6 +8,7 @@ TagManager:
   - Follow
   - GM
   - BlackSub
+  - LevelEnd
   layers:
   - Default
   - TransparentFX

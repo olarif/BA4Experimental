@@ -15,7 +15,7 @@ public class BlackMovement : MonoBehaviour
     private void Start()
     {
         hasBoundary = false;
-        particle.startLifetime = minLifeTime;
+        particle.startLifetime = minLifeTime;  
         particle.Play();
         if (backCollider != null) backCollider.enabled = false;
     }
@@ -25,8 +25,7 @@ public class BlackMovement : MonoBehaviour
         if (hasBoundary)
         {
             particle.startLifetime = maxLifeTime;
-            if (backCollider != null) backCollider.enabled = true;
-           
+            if (backCollider != null) backCollider.enabled = true;        
             
         }
         else
