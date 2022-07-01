@@ -3903,9 +3903,9 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -3932,7 +3932,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 63b8680015e252e46abceb96b11005b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3953,13 +3953,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 49
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b439dd6803d5f841a34bfe4d5d91ae8, type: 3}
   m_Color: {r: 0.01886791, g: 0, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_FlipX: 1
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
+  m_AdaptiveModeThreshold: 0
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
@@ -3973,7 +3973,7 @@ Transform:
   m_GameObject: {fileID: 459158495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.43, y: -0.1, z: 0}
-  m_LocalScale: {x: 5.025, y: 9.875, z: 1}
+  m_LocalScale: {x: 0.8398438, y: 1.935436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 644792311}
@@ -9433,14 +9433,6 @@ PrefabInstance:
     - target: {fileID: 275091273360302704, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 10689
       objectReference: {fileID: 0}
     - target: {fileID: 275091273360302709, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: m_Name
@@ -19143,22 +19135,6 @@ PrefabInstance:
     - target: {fileID: 7359146172803416868, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
       propertyPath: m_Name
       value: Particle System3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 10689
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
-      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
-      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7359146172803416871, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
       propertyPath: m_RootOrder
