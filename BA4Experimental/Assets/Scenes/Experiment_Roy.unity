@@ -3878,7 +3878,8 @@ GameObject:
   - component: {fileID: 459158498}
   - component: {fileID: 459158497}
   - component: {fileID: 459158496}
-  m_Layer: 0
+  - component: {fileID: 459158499}
+  m_Layer: 13
   m_Name: BackCollider
   m_TagString: BlackSub
   m_Icon: {fileID: 0}
@@ -3971,13 +3972,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459158495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.57, y: -0.1, z: 0}
+  m_LocalPosition: {x: -2.43, y: -0.1, z: 0}
   m_LocalScale: {x: 5.025, y: 9.875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 644792311}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &459158499
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459158495}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &459218350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5607,7 +5629,7 @@ GameObject:
   - component: {fileID: 644792308}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: BlackSub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9412,6 +9434,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 10689
+      objectReference: {fileID: 0}
     - target: {fileID: 275091273360302709, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: m_Name
       value: Particle System2
@@ -11164,6 +11194,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179806097}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1198143425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 896398530516894755, guid: f48d7402a5b523843bcfea94f7050611, type: 3}
+  m_PrefabInstance: {fileID: 1109112843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1198695709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18362,6 +18397,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 896398530516894758, guid: f48d7402a5b523843bcfea94f7050611, type: 3}
   m_PrefabInstance: {fileID: 1109112843}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053943446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198143425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d9c0633019f9343bfea7edb0af0758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  hitDamage: 0.5
+  timeDifferenceForHitCount: 0.5
 --- !u!4 &2058485189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5756257971728610384, guid: ae69df39821a76748aecbe582c0257ec, type: 3}
@@ -19093,6 +19143,22 @@ PrefabInstance:
     - target: {fileID: 7359146172803416868, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
       propertyPath: m_Name
       value: Particle System3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 10689
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359146172803416870, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7359146172803416871, guid: c44e93a1550c5c64cab5b3fc8bcf218e, type: 3}
       propertyPath: m_RootOrder
