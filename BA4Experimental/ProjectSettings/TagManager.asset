@@ -7,7 +7,6 @@ TagManager:
   - NPC
   - Follow
   - GM
-  - BlackSub
   layers:
   - Default
   - TransparentFX
@@ -23,7 +22,7 @@ TagManager:
   - 
   - 
   - 
-  - BlackLiquid
+  - 
   - 
   - 
   - 
