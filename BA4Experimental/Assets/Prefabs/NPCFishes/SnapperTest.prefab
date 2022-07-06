@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: -6865256666251591168}
   - component: {fileID: 7892548412623256091}
   - component: {fileID: -2171672884860265758}
+  - component: {fileID: -2691688393901305922}
   m_Layer: 8
   m_Name: SnapperTest
   m_TagString: NPC
@@ -178,7 +179,9 @@ MonoBehaviour:
   stopRange: 1
   rotationSpeed: 4
   smoothDamp: 0.7
-  speed: 3
+  distanceMin: 0
+  distanceMax: 1.5
+  stopDistance: 0.5
 --- !u!114 &7892548412623256091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +218,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-2691688393901305922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076986632218340122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6320a3a0279f8a478b3af14b367bb2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followBehavior: {fileID: 11400000, guid: 4a054de0e69fc624b97fbd46392847ac, type: 2}
+  aggroDistance: 5

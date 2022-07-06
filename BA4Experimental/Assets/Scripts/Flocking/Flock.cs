@@ -6,7 +6,6 @@ public class Flock : MonoBehaviour
 {
     [HideInInspector] public GameObject player;
     [HideInInspector] public GameObject playerFollow;
-    public float aggroDistance = 5f;
 
     public FlockAgent agentPrefab;
     [HideInInspector] public List<FlockAgent> agents = new List<FlockAgent>();
@@ -40,10 +39,8 @@ public class Flock : MonoBehaviour
 
     void Start()
     {
+        playerFollow = GameObject.FindGameObjectWithTag("Follow");
         player = GameObject.FindGameObjectWithTag("Player");
-
-
-
         spawn = this.transform;
 
         squareMaxSpeed = maxSpeed * maxSpeed;
@@ -67,10 +64,6 @@ public class Flock : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Debug.Log(player.transform.position);
-
-        player = GameObject.FindGameObjectWithTag("Player");
-
         foreach (FlockAgent agent in agents.ToArray())
         {
             List<Transform> context = GetNearbyObjects(agent);
@@ -82,17 +75,6 @@ public class Flock : MonoBehaviour
                 move = move.normalized * maxSpeed;
             }
             agent.Move(move);
-
-
-            //check is distance to player is small -> remove agent from list 
-            float distance = Vector3.Distance(agent.transform.position, player.transform.position);
-
-            if(distance < aggroDistance)
-            {
-                //agents.Remove(agent);
-            }
-
-            //Debug.Log(agent + " " + distance);
         }
     }
 

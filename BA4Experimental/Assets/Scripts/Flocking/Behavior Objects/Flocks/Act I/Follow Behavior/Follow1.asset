@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ccdf1937ec1af4e91c2d0c7f519663, type: 3}
   m_Name: Follow1
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 3

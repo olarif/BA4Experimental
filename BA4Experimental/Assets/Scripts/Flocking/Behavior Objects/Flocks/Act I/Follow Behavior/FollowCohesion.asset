@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FollowCohesion
   m_EditorClassIdentifier: 
   filter: {fileID: 0}
-  agentSmoothTime: 5
+  agentSmoothTime: 10

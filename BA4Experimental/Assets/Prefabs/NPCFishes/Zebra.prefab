@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 87689608230342747}
   - component: {fileID: 557790338896871708}
   - component: {fileID: 6318804920598991881}
-  m_Layer: 8
+  m_Layer: 18
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,9 +108,9 @@ GameObject:
   - component: {fileID: 3659673698278350320}
   - component: {fileID: 7815915684539392644}
   - component: {fileID: 1296459359284714758}
-  - component: {fileID: -6865256666251591168}
-  - component: {fileID: 7892548412623256091}
-  m_Layer: 8
+  - component: {fileID: 4758808148025622795}
+  - component: {fileID: 1578822331237728390}
+  m_Layer: 18
   m_Name: Zebra
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -158,26 +158,31 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.063076526, y: -0.0021989942}
-  m_Size: {x: 0.36339307, y: 0.58942616}
+  m_Offset: {x: 0.000025168061, y: -0.010086715}
+  m_Size: {x: 0.32789835, y: 0.5736507}
   m_Direction: 0
---- !u!114 &-6865256666251591168
-MonoBehaviour:
+--- !u!50 &4758808148025622795
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6076986632218340122}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8511ed9799c5744b91abff92a83d19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aggroRange: 3.1
-  stopRange: 1
-  rotationSpeed: 4
-  smoothDamp: 0.7
---- !u!114 &7892548412623256091
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1578822331237728390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,9 +191,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6076986632218340122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b029970de7e2261449d1f0e110315340, type: 3}
+  m_Script: {fileID: 11500000, guid: b6320a3a0279f8a478b3af14b367bb2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceMin: 0.4
-  distanceMax: 0.7
-  stopDistance: 0.1
+  followBehavior: {fileID: 11400000, guid: 4a054de0e69fc624b97fbd46392847ac, type: 2}
+  aggroDistance: 5

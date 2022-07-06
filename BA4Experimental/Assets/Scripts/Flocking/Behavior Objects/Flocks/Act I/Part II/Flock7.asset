@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6a38003faa5f72489edb71903f1adba, type: 2}
   - {fileID: 11400000, guid: fb281f8bd2fd6ed4da99064e1436c1f9, type: 2}
   weights:
-  - 30
-  - 20
+  - 15
+  - 50
   - 1
   - 5

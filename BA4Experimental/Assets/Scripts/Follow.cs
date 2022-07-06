@@ -10,10 +10,14 @@ public class Follow : MonoBehaviour
 
     [SerializeField] float aggroRange;
     [SerializeField] float stopRange;
-    //[SerializeField] float moveSpeed;
     [SerializeField] float rotationSpeed = 2f;
     [SerializeField] float smoothDamp = 2f;
-    //[SerializeField] float speed = 2f;
+
+    GameObject[] fish;
+    [SerializeField] private float distanceMin = 0f;
+    [SerializeField] private float distanceMax = 1.5f;
+    [SerializeField] private float stopDistance = 0.5f;
+    private float distanceBetween;
 
     private Vector2 offset = new Vector2(-2, 0);
 
@@ -21,22 +25,27 @@ public class Follow : MonoBehaviour
     Vector2 velocity;
     //[SerializeField] Vector2 offset;
 
+    private float currentSpeed;
+
     private bool following = false;
 
     private float distance;
 
     void Start()
     {
+        distanceBetween = Random.Range(distanceMin, distanceMax);
+
+        fish = GameObject.FindGameObjectsWithTag("NPC");
         playerFollow = GameObject.FindGameObjectWithTag("Follow");
         player = GameObject.FindGameObjectWithTag("Player");
+        currentSpeed = player.GetComponent<MouseFollow>().currentSpeed;
         rb = GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
     private void OnLevelWasLoaded(int level)
     {
-        playerFollow = GameObject.FindGameObjectWithTag("Follow");
-        player = GameObject.FindGameObjectWithTag("Player");
+        fish = GameObject.FindGameObjectsWithTag("NPC");
 
         if (following)
         {
@@ -46,11 +55,13 @@ public class Follow : MonoBehaviour
 
     void Update()
     {
+
+
         distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (distance < aggroRange && distance >= stopRange)
         {
-            following = true;
+            //following = true;
         }
 
         if (following)
@@ -75,10 +86,30 @@ public class Follow : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
             //move towards tail of fish
-            transform.position = Vector2.SmoothDamp(this.transform.position, playerFollow.transform.position, ref velocity, smoothDamp);
+            //transform.position = Vector2.SmoothDamp(this.transform.position, playerFollow.transform.position, ref velocity, smoothDamp);
             //transform.position = Vector2.Lerp((Vector2)this.transform.position, playerFollow.transform.position, moveSpeed * Time.deltaTime);
             //Vector2 newVector = direction.normalized * speed;
             //rb.velocity = newVector;
+        }
+
+        if(currentSpeed > 0.3)
+        {
+            foreach (GameObject go in fish)
+            {
+                if (go != gameObject)
+                {
+                    float distance = Vector3.Distance(go.transform.position, this.transform.position);
+
+                    if (distance <= distanceBetween && distance > stopDistance)
+                    {
+                        Vector3 direction = transform.position - go.transform.position;
+                        direction.Normalize();
+
+                        transform.position += direction * Time.deltaTime;
+                    }
+
+                }
+            }
         }
 
         if (distance < aggroRange && distance >= stopRange)
