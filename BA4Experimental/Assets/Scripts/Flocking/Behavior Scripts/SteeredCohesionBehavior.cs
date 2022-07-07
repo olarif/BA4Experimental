@@ -14,7 +14,7 @@ public class SteeredCohesionBehavior : FilteredFlockBehavior
         //if no neighbors, return no adjustment
         if (context.Count == 0)
         {
-            //return Vector2.zero;
+            return Vector2.zero;
         }
 
         //add all points together and average

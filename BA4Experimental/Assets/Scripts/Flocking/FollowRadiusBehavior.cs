@@ -12,11 +12,11 @@ public class FollowRadiusBehavior : FlockBehavior
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
-        center = flock.playerFollow.transform.position + new Vector3(-2f,0);
+        center = flock.playerFollow.transform.position;
 
         Vector2 centerOffset = center - (Vector2)agent.transform.position;
         float t = centerOffset.magnitude / radius;
-        if (t < 0.5f)
+        if (t < 0.2f)
         {
             return Vector2.zero;
         }

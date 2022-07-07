@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwapBehavior : MonoBehaviour
 {
-    GameObject playerFollow;
     GameObject player;
 
     public FlockBehavior followBehavior;
@@ -12,7 +11,14 @@ public class SwapBehavior : MonoBehaviour
     private float distance;
     public float aggroDistance = 5f;
 
+    [HideInInspector] public bool following = false;
+
     void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void OnLevelWasLoaded(int level)
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -21,8 +27,12 @@ public class SwapBehavior : MonoBehaviour
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
 
-        if (distance < aggroDistance)
+        if (distance > aggroDistance) return;
+
+        if (distance < aggroDistance && !following)
         {
+            //player.GetComponent<SeparateNPC>().fishList.Add(this.gameObject);
+            following = true;
             GetComponentInParent<Flock>().behavior = followBehavior;
         }
     }

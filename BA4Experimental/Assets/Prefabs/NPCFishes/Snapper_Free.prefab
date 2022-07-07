@@ -108,8 +108,7 @@ GameObject:
   - component: {fileID: 3659673698278350320}
   - component: {fileID: 7815915684539392644}
   - component: {fileID: 1296459359284714758}
-  - component: {fileID: -6865256666251591168}
-  - component: {fileID: 7892548412623256091}
+  - component: {fileID: 9058560337217597397}
   m_Layer: 8
   m_Name: Snapper_Free
   m_TagString: NPC
@@ -161,23 +160,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0029279739, y: 0.009710252}
   m_Size: {x: 0.23571077, y: 0.5563532}
   m_Direction: 0
---- !u!114 &-6865256666251591168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6076986632218340122}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8511ed9799c5744b91abff92a83d19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aggroRange: 3.1
-  stopRange: 1
-  rotationSpeed: 4
-  smoothDamp: 0.7
---- !u!114 &7892548412623256091
+--- !u!114 &9058560337217597397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,6 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b029970de7e2261449d1f0e110315340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceMin: 0.3
+  distanceMin: 0.4
   distanceMax: 0.7
   stopDistance: 0.1

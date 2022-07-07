@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 3659673698278350320}
   - component: {fileID: 7815915684539392644}
   - component: {fileID: 1296459359284714758}
-  - component: {fileID: -6865256666251591168}
   - component: {fileID: 7892548412623256091}
   m_Layer: 8
   m_Name: Zebra_Free
@@ -161,25 +160,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0028292388, y: -0.033110887}
   m_Size: {x: 0.3304436, y: 0.55204123}
   m_Direction: 0
---- !u!114 &-6865256666251591168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6076986632218340122}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8511ed9799c5744b91abff92a83d19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aggroRange: 3.1
-  stopRange: 1
-  rotationSpeed: 4
-  smoothDamp: 0.7
-  distanceMin: 0
-  distanceMax: 1.5
-  stopDistance: 0.5
 --- !u!114 &7892548412623256091
 MonoBehaviour:
   m_ObjectHideFlags: 0
