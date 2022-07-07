@@ -30,7 +30,7 @@ TagManager:
   - Snapper
   - Zebra
   - 
-  - 
+  - Distortion
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HighestLayer
+    uniqueID: 3838790581
     locked: 0
