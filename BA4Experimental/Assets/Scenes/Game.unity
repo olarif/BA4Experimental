@@ -6230,6 +6230,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 378060686}
     m_Modifications:
+    - target: {fileID: 4751479747780480714, guid: 6e88ae04176b4f94cade4104fe9e82b1, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 10625
+      objectReference: {fileID: 0}
     - target: {fileID: 4765362189693818151, guid: 6e88ae04176b4f94cade4104fe9e82b1, type: 3}
       propertyPath: m_Name
       value: TopFollowBlack
