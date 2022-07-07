@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
-    private GameObject player;
-    public float aggroDistance = 5f;
+    [HideInInspector] public GameObject player;
+    [HideInInspector] public GameObject playerFollow;
 
     public FlockAgent agentPrefab;
     [HideInInspector] public List<FlockAgent> agents = new List<FlockAgent>();
@@ -39,8 +39,8 @@ public class Flock : MonoBehaviour
 
     void Start()
     {
+        playerFollow = GameObject.FindGameObjectWithTag("Follow");
         player = GameObject.FindGameObjectWithTag("Player");
-
         spawn = this.transform;
 
         squareMaxSpeed = maxSpeed * maxSpeed;
@@ -62,9 +62,9 @@ public class Flock : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        foreach(FlockAgent agent in agents.ToArray())
+        foreach (FlockAgent agent in agents.ToArray())
         {
             List<Transform> context = GetNearbyObjects(agent);
 
@@ -75,17 +75,6 @@ public class Flock : MonoBehaviour
                 move = move.normalized * maxSpeed;
             }
             agent.Move(move);
-
-
-            //check is distance to player is small -> remove agent from list 
-            float distance = Vector3.Distance(agent.transform.position, player.transform.position);
-
-            if(distance < aggroDistance)
-            {
-                agents.Remove(agent);
-            }
-
-            //Debug.Log(agent + " " + distance);
         }
     }
 

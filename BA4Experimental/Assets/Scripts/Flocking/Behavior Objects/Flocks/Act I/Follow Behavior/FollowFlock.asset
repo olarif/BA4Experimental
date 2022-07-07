@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7506d4e090bac49b6503ccbb8b4afc, type: 3}
+  m_Name: FollowFlock
+  m_EditorClassIdentifier: 
+  behaviors:
+  - {fileID: 11400000, guid: 5216090248ba6294682bf737e7501348, type: 2}
+  - {fileID: 11400000, guid: 24514a06ac5639a4c9ffd35e6d921ff8, type: 2}
+  - {fileID: 11400000, guid: c508b3ab2fb02b843b45d619c2a0e2a5, type: 2}
+  - {fileID: 11400000, guid: 106e7e37a39047e43b7d24c5f9f88347, type: 2}
+  - {fileID: 11400000, guid: cdc41719db8f4bf4da8e43605743e21f, type: 2}
+  weights:
+  - 2
+  - 6
+  - 4
+  - 1
+  - 5
