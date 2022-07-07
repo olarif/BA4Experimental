@@ -195,4 +195,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followBehavior: {fileID: 11400000, guid: 4a054de0e69fc624b97fbd46392847ac, type: 2}
-  aggroDistance: 5
+  aggroDistance: 1
+  following: 0
