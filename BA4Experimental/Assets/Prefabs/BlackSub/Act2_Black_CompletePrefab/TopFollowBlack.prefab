@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 9ae744c8f4296eb49abb18b7aedcbbc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -237,6 +237,10 @@ PrefabInstance:
     - target: {fileID: 275091273360302704, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302706, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: TrailModule.sizeAffectsLifetime
