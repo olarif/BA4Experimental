@@ -4268,7 +4268,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e2e57afa0dc76594693fa559fee6cde8, type: 2}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: maxSpeed
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: agentPrefab
@@ -4276,7 +4276,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: c541bc3cd90fa5a488070238ac4f9140, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
@@ -4285,6 +4285,10 @@ PrefabInstance:
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531538, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: m_Name
@@ -33160,7 +33164,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a9d660ab7ba8218458cfee68e4fcf701, type: 2}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: maxSpeed
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: agentPrefab
@@ -33168,7 +33172,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 042b2b7ad7eb5904fa460fddb93ea448, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
@@ -33177,6 +33181,10 @@ PrefabInstance:
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531538, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: m_Name
@@ -33724,7 +33732,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2188df79b7256124d90ae47349cf6c6a, type: 2}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: maxSpeed
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: agentPrefab
@@ -33732,7 +33740,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 53b834b601e0f8648877871dcdb74c8a, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
@@ -33741,6 +33749,10 @@ PrefabInstance:
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531538, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: m_Name
@@ -43203,7 +43215,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e11836daf44085543a92344611ea964e, type: 2}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: maxSpeed
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: agentPrefab
@@ -43211,7 +43223,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: bb5140e0e1ee78b46b62b3aff537200d, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
@@ -43220,6 +43232,10 @@ PrefabInstance:
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531538, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: m_Name
@@ -60051,7 +60067,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 709b2df263538344788dc1e69be22119, type: 2}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: maxSpeed
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: agentPrefab
@@ -60059,7 +60075,7 @@ PrefabInstance:
       objectReference: {fileID: 7815915684539392644, guid: 26c48bd237a43d146a38d7ebce9dddb0, type: 3}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: driveFactor
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: aggroDistance
@@ -60068,6 +60084,10 @@ PrefabInstance:
     - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: startingCount
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350164229429531537, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8350164229429531538, guid: da2170e635d449b4397d10674eacbe5c, type: 3}
       propertyPath: m_Name
@@ -73196,8 +73216,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3943443366458090044, guid: 1d1a6d7ba44f00344b23a5a21d5b27d5, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943443366458090044, guid: 1d1a6d7ba44f00344b23a5a21d5b27d5, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3943443366458090044, guid: 1d1a6d7ba44f00344b23a5a21d5b27d5, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -73209,7 +73233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3943443366458090047, guid: 1d1a6d7ba44f00344b23a5a21d5b27d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140.27
+      value: 142.07
       objectReference: {fileID: 0}
     - target: {fileID: 3943443366458090047, guid: 1d1a6d7ba44f00344b23a5a21d5b27d5, type: 3}
       propertyPath: m_LocalPosition.y
