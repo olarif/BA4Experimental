@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b7506d4e090bac49b6503ccbb8b4afc, type: 3}
-  m_Name: Flock5
+  m_Name: ActIIFlock5
   m_EditorClassIdentifier: 
   behaviors:
   - {fileID: 11400000, guid: 5342ce7c3833c0c44ae6f7d7c7427d19, type: 2}
@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6a38003faa5f72489edb71903f1adba, type: 2}
   - {fileID: 11400000, guid: 67a12329632a78c4f8b3a99219a9038f, type: 2}
   weights:
-  - 30
-  - 4
-  - 5
+  - 15
+  - 50
+  - 1
   - 5
