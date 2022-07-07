@@ -11,10 +11,13 @@ public class BlackMovement : MonoBehaviour
     public float minLifeTime = 3;
     public float speedUpDistance = 9;
     public BoxCollider2D backCollider;
+    public bool startFollow = false;
 
     private void Start()
     {
         hasBoundary = false;
+        startFollow = false;
+        particle.Stop();
         particle.startLifetime = minLifeTime;  
         particle.Play();
         if (backCollider != null) backCollider.enabled = false;
@@ -30,18 +33,28 @@ public class BlackMovement : MonoBehaviour
         }
         else
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            float currentSpeed;
-            float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance < speedUpDistance)
+            if (startFollow)
             {
-                currentSpeed = speed;
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                float currentSpeed;
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                if (distance < speedUpDistance)
+                {
+                    currentSpeed = speed;
+                }
+                else
+                {
+                    currentSpeed = (distance - speedUpDistance) * 1.3f + speed;
+                }
+                if (player.transform.position.x > this.transform.position.x)
+                {
+                    transform.position += Vector3.right * currentSpeed * Time.deltaTime;
+                }
+                else if (player.transform.position.x < this.transform.position.x)
+                {
+                    transform.position -= Vector3.right * currentSpeed * Time.deltaTime;
+                }
             }
-            else
-            {
-                currentSpeed = (distance - speedUpDistance)*1.3f + speed;
-            }
-            transform.position += Vector3.right * currentSpeed* Time.deltaTime;
         }
     }
 
@@ -53,5 +66,17 @@ public class BlackMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "LevelEnd") hasBoundary = true;
+    }
+
+    public void StartParticle() 
+    {
+        particle.Play();
+        startFollow = true;
+    }
+
+    public void StopParticle()
+    {
+        particle.Stop();
+        startFollow = false;
     }
 }
