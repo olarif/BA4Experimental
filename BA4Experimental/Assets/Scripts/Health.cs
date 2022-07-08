@@ -40,6 +40,7 @@ public class Health : MonoBehaviour
         }
     }
 
+    /*
     private void OnParticleCollision(GameObject other)
     {
         if (!isHit)
@@ -48,6 +49,43 @@ public class Health : MonoBehaviour
                 isHit = true;
                 count = timeDifferenceForHitCount;
             
+        }
+    }
+    */
+
+    /*
+	private void OnParticleTrigger()
+	{
+        if (!isHit)
+        {
+            health -= hitDamage;
+            isHit = true;
+            count = timeDifferenceForHitCount;
+
+        }
+    }
+    */
+
+	private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*
+        if (!isHit)
+        {
+            health -= hitDamage;
+            isHit = true;
+            count = timeDifferenceForHitCount;
+
+        }
+        */
+        if (collision.tag == "BlackSub")
+		{
+            if (!isHit)
+            {
+                health -= hitDamage;
+                isHit = true;
+                count = timeDifferenceForHitCount;
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
