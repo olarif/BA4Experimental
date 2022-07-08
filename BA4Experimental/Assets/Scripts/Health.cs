@@ -32,6 +32,11 @@ public class Health : MonoBehaviour
 
         if(health <= 0)
         {
+            if (this.gameObject.CompareTag("NPC"))
+            {
+                Destroy(gameObject);
+            }
+
             if (this.gameObject.CompareTag("Player"))
             {
                 this.transform.position = gm.lastCheckpointPos;
@@ -40,43 +45,9 @@ public class Health : MonoBehaviour
         }
     }
 
-    /*
-    private void OnParticleCollision(GameObject other)
-    {
-        if (!isHit)
-        {
-                health -= hitDamage;
-                isHit = true;
-                count = timeDifferenceForHitCount;
-            
-        }
-    }
-    */
-
-    /*
-	private void OnParticleTrigger()
-	{
-        if (!isHit)
-        {
-            health -= hitDamage;
-            isHit = true;
-            count = timeDifferenceForHitCount;
-
-        }
-    }
-    */
-
 	private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-        if (!isHit)
-        {
-            health -= hitDamage;
-            isHit = true;
-            count = timeDifferenceForHitCount;
 
-        }
-        */
         if (collision.tag == "BlackSub")
 		{
             if (!isHit)
