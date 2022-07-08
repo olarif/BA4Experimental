@@ -243,8 +243,28 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: TriggerModule.enter
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: TriggerModule.inside
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: TrailModule.sizeAffectsLifetime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: TriggerModule.colliderQueryMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 10241
       objectReference: {fileID: 0}
     - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -278,3 +298,21 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
   m_PrefabInstance: {fileID: 4765362189288107193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4751479747780480716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 275091273360302709, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+  m_PrefabInstance: {fileID: 4765362189288107193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2438540978297958474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751479747780480716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412eb051553bf543a4a23f48b74171e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderGO: {fileID: 1180592615462613827, guid: a6c5abcaeb6e7994b8272ffc08ae8415, type: 3}
