@@ -121,4 +121,10 @@ public class MouseFollow : MonoBehaviour {
         //position = Vector2.Lerp(transform.position, mousePos, moveSpeed / 10);
         //rb.MovePosition(position);
     }
+
+    public void DecreaseMovement(float movement)
+    {
+        maxSpeed -= movement + Time.deltaTime;
+        //maxSpeed = movement;
+    }
 }
