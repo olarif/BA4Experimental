@@ -9,13 +9,7 @@ public class Health : MonoBehaviour
     float count;
     bool isHit=false;
     public float timeDifferenceForHitCount = .5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (isHit) 
@@ -23,9 +17,14 @@ public class Health : MonoBehaviour
             count -= Time.deltaTime;
             if (count <= 0) isHit = false;
         }
-        
-    }
 
+        if(health <= 0)
+        {
+            Debug.Log(this.gameObject.name + " died");
+            this.gameObject.SetActive(false);
+        }
+    }
+/*
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (!isHit)
@@ -38,12 +37,13 @@ public class Health : MonoBehaviour
             }
         }
     }
-
+*/
     private void OnParticleCollision(GameObject other)
     {
+        Debug.Log(this.gameObject.name);
+
         if (!isHit)
         {
-            
                 health -= hitDamage;
                 isHit = true;
                 count = timeDifferenceForHitCount;

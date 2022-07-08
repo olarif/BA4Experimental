@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1296459359284714758}
   - component: {fileID: -1298665421837335653}
   - component: {fileID: 6887961025856081520}
+  - component: {fileID: 5791783686431084847}
   m_Layer: 14
   m_Name: Bong
   m_TagString: NPC
@@ -196,3 +197,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followBehavior: {fileID: 11400000, guid: 4a054de0e69fc624b97fbd46392847ac, type: 2}
   aggroDistance: 4
+  following: 0
+--- !u!114 &5791783686431084847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076986632218340122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d9c0633019f9343bfea7edb0af0758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  hitDamage: 5
+  timeDifferenceForHitCount: 0.2

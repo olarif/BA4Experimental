@@ -35,10 +35,10 @@ MonoBehaviour:
   m_AssetVersion: 1
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 518135
+    m_Bits: 518007
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1566583
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -68,12 +68,12 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: Distortion
-    Event: 250
+    Event: 300
     filterSettings:
       RenderQueueType: 1
       LayerMask:
         serializedVersion: 2
-        m_Bits: 518135
+        m_Bits: 518007
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
