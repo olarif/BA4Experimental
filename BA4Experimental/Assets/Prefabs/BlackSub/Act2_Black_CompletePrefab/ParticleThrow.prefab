@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3943443366458090047}
   - component: {fileID: 3943443366458090044}
   - component: {fileID: 3943443366458090045}
+  - component: {fileID: -2322380943711774333}
   m_Layer: 13
   m_Name: ParticleThrow
   m_TagString: BlackSub
@@ -3789,7 +3790,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 10625
+      m_Bits: 10241
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -3797,13 +3798,13 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
-    inside: 1
+    inside: 0
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
-    colliderQueryMode: 0
+    colliderQueryMode: 2
     radiusScale: 1
     primitives: []
   SubModule:
@@ -4817,3 +4818,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-2322380943711774333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943443366458090042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412eb051553bf543a4a23f48b74171e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderGO: {fileID: 1180592615462613827, guid: a6c5abcaeb6e7994b8272ffc08ae8415, type: 3}
