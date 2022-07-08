@@ -35,6 +35,7 @@ public class Flock : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerFollow = GameObject.FindGameObjectWithTag("Follow");
     }
 
     void Start()
@@ -64,7 +65,7 @@ public class Flock : MonoBehaviour
 
     void FixedUpdate()
     {
-        foreach (FlockAgent agent in agents.ToArray())
+        foreach (FlockAgent agent in agents)
         {
             List<Transform> context = GetNearbyObjects(agent);
 
@@ -93,8 +94,4 @@ public class Flock : MonoBehaviour
         return context;
     }
 
-    public void RemoveFromList(FlockAgent agent)
-    {
-        agents.Remove(agent);
-    }
 }

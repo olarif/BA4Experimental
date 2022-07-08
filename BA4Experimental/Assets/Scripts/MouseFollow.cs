@@ -47,9 +47,9 @@ public class MouseFollow : MonoBehaviour {
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         //slow down rotation speed while close to cursor
-        if(distance < 0.3f)
+        if(distance < .8f)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, (rotationSpeed / 2) * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, (rotationSpeed / 2)* Time.deltaTime);
         } else
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);

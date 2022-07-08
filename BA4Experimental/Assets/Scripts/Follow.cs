@@ -11,7 +11,7 @@ public class Follow : MonoBehaviour
     [SerializeField] float aggroRange;
     [SerializeField] float stopRange;
     [SerializeField] float rotationSpeed = 2f;
-    [SerializeField] float smoothDamp = 2f;
+    //[SerializeField] float smoothDamp = 2f;
 
     GameObject[] fish;
     [SerializeField] private float distanceMin = 0f;
