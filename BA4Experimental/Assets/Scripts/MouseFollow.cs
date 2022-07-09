@@ -6,7 +6,7 @@ using UnityEngine;
 public class MouseFollow : MonoBehaviour {
 
     [SerializeField] public float currentSpeed;
-    [Range(0f, 10f)] [SerializeField] private float maxSpeed = 5;
+    [Range(0f, 10f)] [SerializeField] public float maxSpeed = 5;
     [Range(0f, 20f)] [SerializeField] private float friction = 8f;
     [Range(0f, 1f) ] [SerializeField] private float acceleration = .2f;
     [Range(0f, 20f)] [SerializeField] private float rotationSpeed = 5f;
@@ -23,6 +23,9 @@ public class MouseFollow : MonoBehaviour {
     public SpriteRenderer sideFin;
     public SpriteRenderer bottomFin;
     public SpriteRenderer rareFin;
+
+    private bool speedUp = false;
+    private bool slowDown = false;
    
 
     void Start()
@@ -80,6 +83,16 @@ public class MouseFollow : MonoBehaviour {
             rareFin.flipY = false;
             rareFin.transform.localPosition = new Vector3(rareFin.transform.localPosition.x, 3.24f, rareFin.transform.localPosition.z);
         }
+
+        // timer to slow down movement
+
+        if (slowDown)
+        {
+            if(maxSpeed >= .5f)
+            {
+                maxSpeed -= .2f * Time.deltaTime;
+            }
+        }
     }
     
 
@@ -126,5 +139,18 @@ public class MouseFollow : MonoBehaviour {
     {
         maxSpeed -= movement + Time.deltaTime;
         //maxSpeed = movement;
+    }
+
+
+    public void SlowDown()
+    {
+        slowDown = true;
+        speedUp = false;
+    }
+
+    public void SpeedUp()
+    {
+        speedUp = true;
+        slowDown = false;
     }
 }
