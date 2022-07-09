@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private FMODUnity.StudioEventEmitter emitter;
+    float health;
+
     void Start()
     {
-        
+        health = GetComponent<Health>().health;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        health = GetComponent<Health>().health;
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Health", health);
     }
+
 }
