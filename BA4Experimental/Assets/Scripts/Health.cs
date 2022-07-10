@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
         {
             if (this.gameObject.CompareTag("NPC"))
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
 
             if (this.gameObject.CompareTag("Player"))

@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     FMOD.Studio.Bus master;
 
-    public float masterVolume = 1f;
+    public float masterVolume = .5f;
 
     public static bool GameIsPaused = false;
 
@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        volumeMenuUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
