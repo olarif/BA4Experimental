@@ -29,6 +29,9 @@ public class MouseFollow : MonoBehaviour {
 
     private bool speedUp = false;
     private bool slowDown = false;
+
+    public float slowSpeed = 0.5f;
+    public float speedMultiplier = 0.2f;
    
 
     void Start()
@@ -114,9 +117,17 @@ public class MouseFollow : MonoBehaviour {
 
         if (slowDown)
         {
-            if(maxSpeed >= .5f)
+            if(maxSpeed >= slowSpeed)
             {
-                maxSpeed -= .2f * Time.deltaTime;
+                maxSpeed -= speedMultiplier * Time.deltaTime;
+            }
+        }
+
+        if (speedUp)
+        {
+            if (maxSpeed <= 2.5f)
+            {
+                maxSpeed += speedMultiplier * Time.deltaTime;
             }
         }
     }
