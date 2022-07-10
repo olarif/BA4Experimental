@@ -24,6 +24,9 @@ public class MouseFollow : MonoBehaviour {
     public SpriteRenderer bottomFin;
     public SpriteRenderer rareFin;
 
+    public SpriteRenderer body1, body2,body3;
+    public SpriteRenderer sideFin1, sideFin2;
+
     private bool speedUp = false;
     private bool slowDown = false;
    
@@ -70,6 +73,17 @@ public class MouseFollow : MonoBehaviour {
             bottomFin.transform.localPosition = new Vector3(bottomFin.transform.localPosition.x, 3.25f, body.transform.localPosition.z);
             rareFin.flipY = true;
             rareFin.transform.localPosition=new Vector3(rareFin.transform.localPosition.x, 3.25f,rareFin.transform.localPosition.z);
+
+            body1.flipY = true;
+            body1.transform.localPosition = new Vector3(body1.transform.localPosition.x, 3.31f, body1.transform.localPosition.z);
+            body2.flipY = true;
+            body2.transform.localPosition = new Vector3(body2.transform.localPosition.x, 3.31f, body2.transform.localPosition.z);
+            body3.flipY = true;
+            body3.transform.localPosition = new Vector3(body3.transform.localPosition.x, 3.31f, body3.transform.localPosition.z);
+            sideFin1.flipY = true;
+            sideFin1.transform.localPosition = new Vector3(sideFin1.transform.localPosition.x, 3.55f, body.transform.localPosition.z);
+            sideFin2.flipY = true;
+            sideFin2.transform.localPosition = new Vector3(sideFin2.transform.localPosition.x, 3.55f, body.transform.localPosition.z);
         }
         else
         {
@@ -82,6 +96,18 @@ public class MouseFollow : MonoBehaviour {
             bottomFin.transform.localPosition = new Vector3(bottomFin.transform.localPosition.x, 2.415f, body.transform.localPosition.z);
             rareFin.flipY = false;
             rareFin.transform.localPosition = new Vector3(rareFin.transform.localPosition.x, 3.24f, rareFin.transform.localPosition.z);
+
+
+            body1.flipY = false;
+            body1.transform.localPosition = new Vector3(body1.transform.localPosition.x, 3.31f, body1.transform.localPosition.z);
+            body2.flipY = false;
+            body2.transform.localPosition = new Vector3(body2.transform.localPosition.x, 3.31f, body2.transform.localPosition.z);
+            body3.flipY = false;
+            body3.transform.localPosition = new Vector3(body3.transform.localPosition.x, 3.31f, body3.transform.localPosition.z);
+            sideFin1.flipY = false;
+            sideFin1.transform.localPosition = new Vector3(sideFin1.transform.localPosition.x, 3.028f, body.transform.localPosition.z);
+            sideFin2.flipY = false;
+            sideFin2.transform.localPosition = new Vector3(sideFin2.transform.localPosition.x, 3.028f, body.transform.localPosition.z);
         }
 
         // timer to slow down movement

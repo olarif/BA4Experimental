@@ -10,6 +10,7 @@ public class BlackMovement : MonoBehaviour
     public float maxLifeTime = 15;
     public float minLifeTime = 3;
     public float speedUpDistance = 9;
+    public float steadyDistance = 1.5f;
     public BoxCollider2D backCollider;
     public bool startFollow = false;
 
@@ -46,11 +47,12 @@ public class BlackMovement : MonoBehaviour
                 {
                     currentSpeed = (distance - speedUpDistance) * 1.3f + speed;
                 }
-                if (player.transform.position.x > this.transform.position.x)
+
+                if (player.transform.position.x > this.transform.position.x+steadyDistance)
                 {
                     transform.position += Vector3.right * currentSpeed * Time.deltaTime;
                 }
-                else if (player.transform.position.x < this.transform.position.x)
+                else if (player.transform.position.x < this.transform.position.x-steadyDistance)
                 {
                     transform.position -= Vector3.right * currentSpeed * Time.deltaTime;
                 }
