@@ -259,6 +259,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
+      propertyPath: TriggerModule.radiusScale
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 275091273360302707, guid: 5be1a2a6a881d024aaa77ecfb1254cf8, type: 3}
       propertyPath: NoiseModule.strength.scalar
       value: 2.5
       objectReference: {fileID: 0}
