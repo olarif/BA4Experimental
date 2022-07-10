@@ -3805,7 +3805,7 @@ ParticleSystem:
     enter: 2
     exit: 0
     colliderQueryMode: 2
-    radiusScale: 0.3
+    radiusScale: 0.2
     primitives: []
   SubModule:
     serializedVersion: 2
