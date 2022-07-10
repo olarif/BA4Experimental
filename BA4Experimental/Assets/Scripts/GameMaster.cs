@@ -6,6 +6,8 @@ public class GameMaster : MonoBehaviour
 {
     private static GameMaster instance;
 
+    [HideInInspector] public List<GameObject> fish;
+
     public Vector2 lastCheckpointPos;
 
     private void Awake()
@@ -17,6 +19,14 @@ public class GameMaster : MonoBehaviour
         } else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void Reenable()
+    {
+        foreach(GameObject fish in fish)
+        {
+            fish.SetActive(true);
         }
     }
 

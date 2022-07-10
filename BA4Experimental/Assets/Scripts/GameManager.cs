@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
 
         player.transform.position = gm.lastCheckpointPos;
+
     }
 
     void Update()

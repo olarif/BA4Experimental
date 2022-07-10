@@ -11,14 +11,17 @@ public class Health : MonoBehaviour
     public float timeDifferenceForHitCount = .5f;
 
     GameMaster gm;
+    GameManager m;
 
     private void OnLevelWasLoaded(int level)
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        //m = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     private void Start()
     {
+        //m = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
@@ -34,11 +37,16 @@ public class Health : MonoBehaviour
         {
             if (this.gameObject.CompareTag("NPC"))
             {
+                gm.fish.Add(this.gameObject);
+                this.transform.parent = null;
+                this.transform.position = gm.lastCheckpointPos + new Vector2(-10,0);
                 gameObject.SetActive(false);
+                health = 5;
             }
 
             if (this.gameObject.CompareTag("Player"))
             {
+                gm.Reenable();
                 this.transform.position = gm.lastCheckpointPos;
                 health = 100;
             }
