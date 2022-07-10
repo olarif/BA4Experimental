@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ActIIRadius5
   m_EditorClassIdentifier: 
   center: {x: 405, y: 3.5}
-  radius: 3
+  radius: 1.5
