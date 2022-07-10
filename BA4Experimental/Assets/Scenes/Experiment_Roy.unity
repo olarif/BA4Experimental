@@ -6670,6 +6670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e209e34318691745b12a0eda7b7e718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishe: []
 --- !u!61 &822147051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10106,6 +10107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e209e34318691745b12a0eda7b7e718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishe: []
 --- !u!61 &1209803293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11444,6 +11446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e209e34318691745b12a0eda7b7e718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishe: []
 --- !u!61 &1333810229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12280,6 +12283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e209e34318691745b12a0eda7b7e718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishe: []
 --- !u!61 &1459671040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15089,6 +15093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec891826bbfac3445b767ce952a1a505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fish: []
   lastCheckpointPos: {x: -8, y: 1}
 --- !u!4 &1785129245
 Transform:
@@ -16235,6 +16240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e209e34318691745b12a0eda7b7e718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishe: []
 --- !u!61 &1939417765
 BoxCollider2D:
   m_ObjectHideFlags: 0
