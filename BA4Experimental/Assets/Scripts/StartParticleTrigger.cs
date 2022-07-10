@@ -11,14 +11,16 @@ public class StartParticleTrigger : MonoBehaviour
     {
         if (collision.tag == "Player") 
         {
-            if (followParticle != null) 
+            if (followParticle != null)
             {
                 followParticle.StartParticle();
-            
+                Destroy(gameObject);
+
             }
             if (throwParticle != null) 
             {
                 throwParticle.Play();
+                Destroy(gameObject);
             }
         }
     }
