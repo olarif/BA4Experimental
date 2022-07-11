@@ -10,6 +10,7 @@ TagManager:
   - BlackSub
   - LevelEnd
   - MaskCollider
+  - BreathTrigger
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -46,6 +47,14 @@ public class Health : MonoBehaviour
 
             if (this.gameObject.CompareTag("Player"))
             {
+                GameObject[] t = GameObject.FindGameObjectsWithTag("BreathTrigger");
+
+                foreach(GameObject trigger in t)
+                {
+                    trigger.SetActive(false);
+                }
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 gm.Reenable();
                 this.transform.position = gm.lastCheckpointPos;
                 health = 100;
