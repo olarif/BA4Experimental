@@ -19,7 +19,7 @@ public class StartParticleTrigger : MonoBehaviour
             }
             if (throwParticle != null) 
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Track/Sounds/breath");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Track/randomBreath");
                 throwParticle.Play();
                 //Destroy(gameObject);
             }
