@@ -67,12 +67,9 @@ public class Health : MonoBehaviour
         }
         if (collision.tag == "MaskCollider")
         {
-            if (!isHit)
-            {
                 health -= 100;
                 isHit = true;
                 count = timeDifferenceForHitCount;
-            }
         }
     }
 }
