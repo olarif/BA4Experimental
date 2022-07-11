@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
     {
         master.setVolume(masterVolume);
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
         {
             if (GameIsPaused)
             {
