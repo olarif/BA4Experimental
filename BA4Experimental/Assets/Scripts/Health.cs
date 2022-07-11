@@ -65,5 +65,14 @@ public class Health : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+        if (collision.tag == "MaskCollider")
+        {
+            if (!isHit)
+            {
+                health -= 100;
+                isHit = true;
+                count = timeDifferenceForHitCount;
+            }
+        }
     }
 }
