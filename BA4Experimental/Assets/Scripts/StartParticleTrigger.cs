@@ -14,13 +14,14 @@ public class StartParticleTrigger : MonoBehaviour
             if (followParticle != null)
             {
                 followParticle.StartParticle();
-                Destroy(gameObject);
+                //Destroy(gameObject);
 
             }
             if (throwParticle != null) 
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Track/Sounds/breath");
                 throwParticle.Play();
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
     }
