@@ -34,7 +34,7 @@ public class SwapBehavior : MonoBehaviour
             //player.GetComponent<SeparateNPC>().fishList.Add(this.gameObject);
             following = true;
             GetComponentInParent<Flock>().behavior = followBehavior;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Track/fishCollect");
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Track/fishCollect");
         }
     }
 }
