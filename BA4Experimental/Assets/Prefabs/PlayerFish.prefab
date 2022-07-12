@@ -368,8 +368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  hitDamage: 5
-  timeDifferenceForHitCount: 0.2
+  hitDamage: 4
+  timeDifferenceForHitCount: 0.8
 --- !u!95 &1404741946359343519
 Animator:
   serializedVersion: 4

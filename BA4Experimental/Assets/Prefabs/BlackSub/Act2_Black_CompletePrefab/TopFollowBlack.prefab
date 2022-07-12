@@ -134,12 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bd92752e198a14cb03d37f6091fe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.8
+  speed: 1.4
   hasBoundary: 0
   particle: {fileID: 4751479747780480714}
   maxLifeTime: 10
   minLifeTime: 3
-  speedUpDistance: 7
+  speedUpDistance: 7.5
   steadyDistance: 1.5
   backCollider: {fileID: 0}
   startFollow: 0
