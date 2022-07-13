@@ -71,6 +71,11 @@ public class Health : MonoBehaviour
                 health -= hitDamage;
                 isHit = true;
                 count = timeDifferenceForHitCount;
+                if (this.gameObject.CompareTag("Player"))
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Track/damage");
+                    this.GetComponent<damageFlash>().DamagePlayer();
+                }
                 Destroy(collision.gameObject);
             }
         }
